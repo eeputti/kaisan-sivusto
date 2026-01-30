@@ -1,13 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
-
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 export function SiteHeader({ active }: { active?: string }) {
   return (
     <>
       <div className="topLine">
         <span>{site.shared.tinyTopLeft}</span>
-        <span className="topLineRight">{site.shared.tagline}</span>
+        <span className="topLineRight">
+          <span>{site.shared.tagline}</span>
+          <ThemeSwitcher />
+        </span>
       </div>
 
       <header className="hero">

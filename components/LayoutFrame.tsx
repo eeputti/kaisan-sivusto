@@ -14,7 +14,7 @@ export function LayoutFrame({
         <SiteHeader active={active} />
         {children}
         <footer className="footer">
-          <span>made with love + liikaa giffejä</span>
+          <span>tehty kaisa mielessä</span>
         </footer>
       </div>
     </main>

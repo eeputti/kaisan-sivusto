@@ -1,10 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { site } from "@/lib/site";
 import { RetroBox } from "@/components/RetroBox";
 
 const badReplies = ["naah", "no ei tosiaa", "mm ei", "ei mee läpi"];
+const STORAGE_KEY = "minipeli:deittaus";
 
 type Trait = {
   label: string;
@@ -25,6 +26,19 @@ export function DateGame() {
   );
 
   const isComplete = selectedGood.size === goodTraits.length;
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "done") {
+      setSelectedGood(new Set(goodTraits));
+    }
+  }, [goodTraits]);
+
+  useEffect(() => {
+    if (isComplete) {
+      window.localStorage.setItem(STORAGE_KEY, "done");
+    }
+  }, [isComplete]);
 
   const toggleGood = (label: string) => {
     setSelectedGood((prev) => {
@@ -60,7 +74,9 @@ export function DateGame() {
               key={trait.label}
               className={`traitItem ${trait.good ? "traitGood" : "traitBad"} ${
                 isSelected ? "traitSelected" : ""
-              } ${dismissed ? "traitDismissed" : ""}`}
+              } ${dismissed ? "traitDismissed" : ""} ${
+                !trait.good && dismissed ? "traitWrong" : ""
+              }`}
             >
               <button
                 type="button"
