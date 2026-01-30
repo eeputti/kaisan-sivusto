@@ -1,14 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useMusic } from "@/components/MusicProvider";
 export function SiteHeader({ active }: { active?: string }) {
+  const { isPlaying, toggle, hint } = useMusic();
+
   return (
     <>
       <div className="topLine">
         <span>{site.shared.tinyTopLeft}</span>
         <span className="topLineRight">
-          <span>{site.shared.tagline}</span>
+          <button
+            type="button"
+            className="btn88 audioBtn"
+            onClick={toggle}
+            title={hint || undefined}
+          >
+            {isPlaying ? "laita musa pois" : "laita musa päälle"}
+          </button>
           <ThemeSwitcher />
         </span>
       </div>
