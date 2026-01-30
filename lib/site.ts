@@ -1,7 +1,7 @@
 export const site = {
   meta: {
     title: "kaisan",
-    description: "pikkusivusto <3",
+    description: "pelisivusto <3",
   },
 
   // sama rakenne kuin mallisivussa: Home | Family | Gear | Resources
