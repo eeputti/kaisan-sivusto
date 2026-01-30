@@ -21,7 +21,7 @@ export function HeartMiniGame() {
   }, []);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const stored = window.sessionStorage.getItem(STORAGE_KEY);
     if (stored === "done") {
       setCount(heartMiniGame.targetCount);
     }
@@ -30,7 +30,7 @@ export function HeartMiniGame() {
 
   useEffect(() => {
     if (hasUnlocked) {
-      window.localStorage.setItem(STORAGE_KEY, "done");
+      window.sessionStorage.setItem(STORAGE_KEY, "done");
     }
   }, [hasUnlocked]);
 

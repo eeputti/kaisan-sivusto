@@ -14,19 +14,19 @@ export function WouldYouRather() {
   const isComplete = wouldYouRather.questions.every((question) => answers[question.id]);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const stored = window.sessionStorage.getItem(STORAGE_KEY);
     if (stored) {
       try {
         setAnswers(JSON.parse(stored) as Answers);
       } catch {
-        window.localStorage.removeItem(STORAGE_KEY);
+        window.sessionStorage.removeItem(STORAGE_KEY);
       }
     }
   }, []);
 
   useEffect(() => {
     if (isComplete) {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+      window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
     }
   }, [answers, isComplete]);
 

@@ -10,7 +10,7 @@ export function GiftGate() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const hasAll = REQUIRED_KEYS.every((key) => window.localStorage.getItem(key));
+    const hasAll = REQUIRED_KEYS.every((key) => window.sessionStorage.getItem(key));
     setReady(hasAll);
   }, []);
 

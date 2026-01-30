@@ -37,7 +37,7 @@ export function MinipeliList() {
 
   useEffect(() => {
     const status = games.reduce<Record<string, boolean>>((acc, game) => {
-      acc[game.id] = Boolean(window.localStorage.getItem(game.storageKey));
+      acc[game.id] = Boolean(window.sessionStorage.getItem(game.storageKey));
       return acc;
     }, {});
     setCompleted(status);
