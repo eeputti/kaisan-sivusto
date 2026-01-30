@@ -15,8 +15,7 @@ export const site = {
   home: {
     whatsNewTitle: "uusinta uutta!",
     whatsNew:
-      "tänään: kaisan oma internet-nurkka julkaistu. tavoitteena: olla mahdollisimman 1998 ja mahdollisimman meidän.",
-    todo: "To do list: lisää kuvia, lisää 1 inside joke, lisää 1 yllätyslinkki.",
+      "maailman parhaimmal ihmisel taitaa olla vähä niiku synttärit!! JEEEEEEE ONNNEEE MURUKAISUUUU!!",
     aboutTitle: "meistä",
     aboutBody:
       "pieni nurkka, jossa on meidän juttuja: kahvi, nauru, ja se että maailma tuntuu hyvältä kun ollaan samassa rytmissä.",

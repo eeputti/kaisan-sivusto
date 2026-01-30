@@ -19,7 +19,6 @@ export default function HomePage() {
               <Image src="/media/vhs.gif" alt="" width={56} height={56} className="gifSticker" />
             </div>
             <div className="hr" />
-            <p className="p muted">{h.todo}</p>
           </RetroBox>
         </div>
 
