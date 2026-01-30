@@ -8,6 +8,7 @@ export const site = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Family", href: "/family" },
+    { label: "Muistot", href: "/muistot" },
     { label: "Gear", href: "/gear" },
     { label: "Resources", href: "/resources" },
     { label: "lahja", href: "/lahja" },
@@ -38,6 +39,29 @@ export const site = {
     ],
     featuredGifTitle: "FEATURED GIF",
     featuredGifCaption: "cat on the strat (vaihda gif)",
+  },
+  dateGame: {
+    goodTraits: [
+      "kaunein",
+      "ihanin",
+      "paras",
+      "söpöin",
+      "hyvä kommunikoimaan",
+      "ihana ajattelu",
+      "antaa elää vapaasti",
+      "herkkä",
+      "inspiroiva",
+    ],
+    badTraits: [
+      "mustasukkanen",
+      "tyhmä",
+      "epäpätevä",
+      "kontrollifriikki",
+      "kusipää!",
+      "ilkeä",
+    ],
+    secretTitle: "salainen juttu",
+    secretText: "oot mun paras juttu ja haluun olla sun kanssa ihan kaikessa.",
   },
 
   shared: {
@@ -107,44 +131,40 @@ export const site = {
     ],
   },
 
-  interactive: {
-    heartMiniGame: {
-      title: "mini-peli: 10 sydäntä",
-      buttonLabel: "raksauta sydämet!",
-      targetCount: 10,
-      unlockedPill: "unlocked",
-      secretTitle: "salainen viesti:",
-      secretText: "salaisuus: sun kanssa kaikki päivät tuntuu juhlalta.",
-    },
-    giftReveal: {
-      title: "synttärilahja",
-      steps: [
-        { text: "haluatko avata lahjan?", buttonLabel: "jooo!" },
-        { text: "ootko varma? 😳", buttonLabel: "jooo" },
-        { text: "paina vielä kerran (eelistä) ;) jooo", buttonLabel: "jooo" },
-      ],
-      reveal: {
-        pill: "reveal",
-        title: "ta-da! tässä se on",
-        text: "tää lahja on meidän yhteinen lupaus: lisää kahvia, lisää seikkailuja, lisää haleja.",
-        links: [
-          { label: "yllätyslinkki 1", href: "https://open.spotify.com" },
-          { label: "yllätyslinkki 2", href: "https://photos.google.com" },
-        ],
+  gallery: {
+    title: "# Muistot",
+    subtitle: "Klikkaa kuvaa nähdäksesi muiston isona.",
+    photos: [
+      {
+        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+        alt: "Iltavalo metsässä",
+        note: "Yksi niistä kävelyistä, joissa ilma tuntui pehmeältä.",
       },
-    },
-    wouldYouRather: {
-      title: "kumpi mieluummin",
-      questions: [
-        { id: "kahvi-tee", prompt: "kahvi vai tee?", options: ["kahvi", "tee"] },
-        { id: "ilta-aamu", prompt: "ilta vai aamu?", options: ["ilta", "aamu"] },
-        { id: "reissu-koti", prompt: "reissu vai koti?", options: ["reissu", "koti"] },
-        { id: "kaisa-eelis", prompt: "kaisa vai eelis?", options: ["kaisa", "eelis"] },
-        { id: "meri-metsa", prompt: "meri vai metsä?", options: ["meri", "metsä"] },
-        { id: "makea-suolainen", prompt: "makea vai suolainen?", options: ["makea", "suolainen"] },
-        { id: "leffa-sarja", prompt: "leffa vai sarja?", options: ["leffa", "sarja"] },
-        { id: "peitto-tyyny", prompt: "peitto vai tyyny?", options: ["peitto", "tyyny"] },
-      ],
-    },
+      {
+        src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+        alt: "Sumuinen järvi",
+        note: "Hiljaisuus + kahvi termarista.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+        alt: "Poutapilvet",
+        note: "Aamu, kun kaikki oli taas helppoa.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
+        alt: "Polku vuorille",
+        note: "Yhteinen seikkailu, vaikka matka oli lyhyt.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=80",
+        alt: "Taivas järven yllä",
+        note: "Se hetki, kun istuttiin vaan ja katsottiin kauas.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
+        alt: "Kivinen ranta",
+        note: "Naurettiin ja heitettiin kiviä veteen.",
+      },
+    ],
   },
 } as const;

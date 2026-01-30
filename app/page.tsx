@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AudioDock } from "@/components/AudioDock";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
 import { HeartMiniGame } from "@/components/HeartMiniGame";
@@ -10,6 +11,7 @@ export default function HomePage() {
 
   return (
     <LayoutFrame active="/">
+      <AudioDock />
       <div className="homeGrid">
         <div className="homeLeft">
           <RetroBox title={h.whatsNewTitle}>
@@ -53,16 +55,8 @@ export default function HomePage() {
           </RetroBox>
         </div>
       </div>
-
-      <div className="homeExtras">
-        <RetroBox title={h.aboutTitle}>
-          <p className="p">{h.aboutBody}</p>
-        </RetroBox>
-
-        <div className="homeInteractive">
-          <HeartMiniGame />
-          <WouldYouRather />
-        </div>
+      <div className="homeGame">
+        <DateGame />
       </div>
     </LayoutFrame>
   );

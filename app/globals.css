@@ -159,6 +159,30 @@ a {
   color: var(--muted);
 }
 
+.audioDock{
+  margin: 12px;
+  padding: 10px;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+  box-shadow:
+    inset 2px 2px 0 var(--bevelLight),
+    inset -2px -2px 0 var(--bevelDark);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.audioDockButtons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.audioBtn{
+  cursor: pointer;
+}
+.audioHint{
+  margin: 0;
+}
+
 /* layout grids */
 .homeGrid{
   display: grid;
@@ -221,6 +245,80 @@ a {
   margin: 10px 0;
 }
 
+.homeGame{
+  padding: 0 12px 12px;
+}
+
+.dateGame .p{ margin-bottom: 8px; }
+
+.traitGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+}
+
+.traitItem{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.traitButton{
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+  font-size: 12px;
+  padding: 8px 10px;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow:
+    inset 2px 2px 0 var(--bevelLight),
+    inset -2px -2px 0 var(--bevelDark);
+}
+
+.traitButton:hover{ filter: brightness(1.05); }
+.traitButton:disabled{ cursor: not-allowed; }
+
+.traitSelected .traitButton{
+  border-color: rgba(167,255,181,0.8);
+  box-shadow:
+    inset 2px 2px 0 rgba(167,255,181,0.35),
+    inset -2px -2px 0 rgba(0,0,0,0.45);
+}
+
+.traitDismissed{
+  opacity: 0.35;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.traitNote{
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.traitProgress{
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.traitProgress.show{ opacity: 1; }
+
+.traitSecret{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255,255,255,0.25);
+}
+
+.traitSecretTitle{
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-transform: lowercase;
+}
+
 .familyGrid{
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -245,55 +343,76 @@ a {
   margin: 0 0 6px 0;
 }
 
-.pageSection{
+/* gallery */
+.galleryPage{
   padding: 12px;
-}
-
-.pill{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 2px 8px;
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,0.25);
-  font-size: 11px;
-  text-transform: lowercase;
-  margin-top: 8px;
-}
-
-.miniRow{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.miniReveal{
-  margin-top: 10px;
-}
-
-.miniTitle{
-  margin: 8px 0 6px 0;
-  font-size: 14px;
-  text-transform: lowercase;
-}
-
-.wyrList{
   display: grid;
   gap: 12px;
 }
-
-.wyrItem{
-  padding-bottom: 10px;
-  border-bottom: 1px dashed rgba(255,255,255,0.2);
+.galleryGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.galleryCard{
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  appearance: none;
+}
+.galleryCard:hover{
+  filter: brightness(1.05);
+}
+.galleryImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.galleryMeta{
+  margin-top: 8px;
 }
 
-.wyrItem:last-child{
-  border-bottom: none;
-  padding-bottom: 0;
+/* lightbox */
+.lightboxOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 50;
 }
-
-.wyrButtons{
+.lightboxCard{
+  width: min(92vw, 820px);
+}
+.lightboxHeader{
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 2px solid var(--border);
+  background: rgba(255,255,255,0.05);
+}
+.lightboxTitle{
+  margin: 0;
+  font-size: 18px;
+}
+.lightboxBody{
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.lightboxImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.lightboxNote{
+  margin: 0;
 }
