@@ -61,8 +61,9 @@ export function WouldYouRather() {
                 <button
                   key={option}
                   type="button"
-                  className="btn88"
+                  className={`btn88${answers[question.id] === option ? " btn88Active" : ""}`}
                   onClick={() => handleAnswer(question.id, option)}
+                  aria-pressed={answers[question.id] === option}
                 >
                   {option}
                 </button>
