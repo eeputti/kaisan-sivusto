@@ -40,7 +40,7 @@ export const site = {
       "hyvä kommunikoimaan",
       "ihana ajattelu",
       "antaa elää vapaasti",
-      "herkkä",
+      "tunneälykäs",
       "inspiroiva",
     ],
     badTraits: [
