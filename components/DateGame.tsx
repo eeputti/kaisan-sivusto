@@ -6,6 +6,9 @@ import { site } from "@/lib/site";
 import { RetroBox } from "@/components/RetroBox";
 
 const badReplies = ["naah", "no ei tosiaa", "mm ei", "ei mee läpi"];
+const goodReplies: Record<string, string> = {
+  kaunein: "ja aina sillonki kun kaisa aattelee ettei se ois!!",
+};
 const STORAGE_KEY = "minipeli:deittaus";
 
 type Trait = {
@@ -75,6 +78,9 @@ export function DateGame() {
         {traits.map((trait) => {
           const isSelected = selectedGood.has(trait.label);
           const dismissed = Boolean(dismissedBad[trait.label]);
+          const goodNote = goodReplies[trait.label];
+          const showGoodNote = trait.good && isSelected && goodNote;
+          const note = dismissed ? dismissedBad[trait.label] : showGoodNote ? goodNote : null;
           return (
             <div
               key={trait.label}
@@ -92,7 +98,7 @@ export function DateGame() {
               >
                 {trait.label}
               </button>
-              {dismissed && <span className="traitNote">{dismissedBad[trait.label]}</span>}
+              {note && <span className="traitNote">{note}</span>}
             </div>
           );
         })}
