@@ -64,7 +64,21 @@ export default function HomePage() {
               <Image src="/media/wii.gif" alt="" width={48} height={48} className="gifSticker" />
             </div>
           </RetroBox>
-
+          <RetroBox title={h.memoriesTitle}>
+            <div className="homeMemoriesGrid">
+              {h.memories.map((memory) => (
+                <div key={memory.src} className="homeMemoriesItem">
+                  <Image
+                    className="homeMemoriesImage"
+                    src={memory.src}
+                    alt={memory.alt}
+                    width={220}
+                    height={220}
+                  />
+                </div>
+              ))}
+            </div>
+          </RetroBox>
         </div>
       </div>
     </LayoutFrame>

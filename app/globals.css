@@ -238,6 +238,23 @@ a {
   padding: 0 12px 12px;
 }
 
+.homeMemoriesGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+.homeMemoriesItem{
+  border: 1px solid var(--border);
+  padding: 6px;
+  background: transparent;
+}
+.homeMemoriesImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
 .homeInteractive{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -554,9 +571,14 @@ a {
   gap: 12px;
 }
 .galleryGrid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
+  column-count: 3;
+  column-gap: 12px;
+}
+@media (max-width: 980px){
+  .galleryGrid{ column-count: 2; }
+}
+@media (max-width: 620px){
+  .galleryGrid{ column-count: 1; }
 }
 .galleryCard{
   text-align: left;
@@ -564,6 +586,10 @@ a {
   cursor: pointer;
   font: inherit;
   appearance: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 12px;
+  break-inside: avoid;
 }
 .galleryImage{
   width: 100%;
