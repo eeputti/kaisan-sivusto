@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
 import { MinipeliList } from "@/components/MinipeliList";
@@ -8,6 +9,11 @@ export default function MinipeliPage() {
       <div className="pageSection">
         <RetroBox title="minipelit">
           <p className="p muted">valitse peli — kaikki pitää voittaa ennen lahjaa.</p>
+          <div className="gifStrip" aria-hidden="true">
+            <Image src="/media/kachow 2.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/featured.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/frog.gif" alt="" width={48} height={48} className="gifSticker" />
+          </div>
           <MinipeliList />
         </RetroBox>
       </div>

@@ -23,6 +23,11 @@ export default function FamilyPage() {
           </div>
           <div className="hr" />
           <Image src="/media/family.png" alt="Family doodle" width={220} height={140} />
+          <div className="gifStrip" aria-hidden="true">
+            <Image src="/media/meiangifi-ezgif.com-optimize.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/homer.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/button-anim.gif" alt="" width={48} height={48} className="gifSticker" />
+          </div>
         </RetroBox>
 
         <div>
@@ -36,6 +41,11 @@ export default function FamilyPage() {
           ))}
           <RetroBox>
             <p className="p">{about.footer}</p>
+            <div className="gifStrip" aria-hidden="true">
+              <Image src="/media/a.gif" alt="" width={40} height={40} className="gifSticker" />
+              <Image src="/media/8.gif" alt="" width={40} height={40} className="gifSticker" />
+              <Image src="/media/g.gif" alt="" width={40} height={40} className="gifSticker" />
+            </div>
           </RetroBox>
         </div>
       </div>
