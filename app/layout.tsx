@@ -6,6 +6,9 @@ import { Toasts } from "@/components/Toasts";
 export const metadata: Metadata = {
   title: site.meta.title,
   description: site.meta.description,
+  icons: {
+    icon: "/kaisa.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

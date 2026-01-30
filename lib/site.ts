@@ -30,6 +30,21 @@ export const site = {
       "4. se yks ilta",
       "5. vielä yks kierros",
     ],
+    memoriesTitle: "pieniä muistoja",
+    memories: [
+      {
+        src: "/kuvia_0000s_0001_IMG_4820.png",
+        alt: "Muisto: katse kameraan",
+      },
+      {
+        src: "/kuvia_0000s_0004_5AFF8C66-D971-481E-905E-0F42C90B5C35_1_105_c.png",
+        alt: "Muisto: yhteinen hetki",
+      },
+      {
+        src: "/kuvia_0000s_0011_IMG_1333.png",
+        alt: "Muisto: spontaani kuva",
+      },
+    ],
   },
   dateGame: {
     goodTraits: [
@@ -178,34 +193,69 @@ export const site = {
     subtitle: "Klikkaa kuvaa nähdäksesi muiston isona.",
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-        alt: "Iltavalo metsässä",
-        note: "Yksi niistä kävelyistä, joissa ilma tuntui pehmeältä.",
+        src: "/kuvia_0000s_0000_36746728-AB09-498A-A5AB-785333D31FDA.png",
+        alt: "Muisto: lähikuva",
+        note: "Hetki, joka jäi hyvällä tavalla mieleen.",
       },
       {
-        src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
-        alt: "Sumuinen järvi",
-        note: "Hiljaisuus + kahvi termarista.",
+        src: "/kuvia_0000s_0001_IMG_4820.png",
+        alt: "Muisto: yhdessä",
+        note: "Iltapäivä, kun kaikki tuntui helpolta.",
       },
       {
-        src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
-        alt: "Poutapilvet",
-        note: "Aamu, kun kaikki oli taas helppoa.",
+        src: "/kuvia_0000s_0002_IMG_3820.png",
+        alt: "Muisto: rento hetki",
+        note: "Se pieni nauru, jonka haluaa muistaa.",
       },
       {
-        src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
-        alt: "Polku vuorille",
-        note: "Yhteinen seikkailu, vaikka matka oli lyhyt.",
+        src: "/kuvia_0000s_0003_2F75F7A2-022E-41E3-8872-4B40B8FF809E_1_201_a.png",
+        alt: "Muisto: kävely",
+        note: "Sellainen hetki, kun kaupunki hidastui.",
       },
       {
-        src: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=80",
-        alt: "Taivas järven yllä",
-        note: "Se hetki, kun istuttiin vaan ja katsottiin kauas.",
+        src: "/kuvia_0000s_0004_5AFF8C66-D971-481E-905E-0F42C90B5C35_1_105_c.png",
+        alt: "Muisto: lempeä ilta",
+        note: "Pehmeä valo ja rauhallinen fiilis.",
       },
       {
-        src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
-        alt: "Kivinen ranta",
-        note: "Naurettiin ja heitettiin kiviä veteen.",
+        src: "/kuvia_0000s_0005_C2B2722C-82D5-4D71-BE49-26CBF8A460EE_1_105_c.png",
+        alt: "Muisto: aurinkoinen hetki",
+        note: "Päivä, joka tuntui kevyeltä.",
+      },
+      {
+        src: "/kuvia_0000s_0006_Näyttökuva-2026-01-30-kello-21.07.56.png",
+        alt: "Muisto: ruutuhetki",
+        note: "Pieni hetki ruudun äärellä.",
+      },
+      {
+        src: "/kuvia_0000s_0007_FA124C67-1F09-47B4-B532-8AF7AAAC26C8_1_201_a.png",
+        alt: "Muisto: hymy",
+        note: "Kuva, joka tekee aina hyvän mielen.",
+      },
+      {
+        src: "/kuvia_0000s_0008_63FE0640-0207-4559-966E-BB66B8794D90_1_105_c.png",
+        alt: "Muisto: pysähtyminen",
+        note: "Hetki, kun pysähdyttiin.",
+      },
+      {
+        src: "/kuvia_0000s_0009_5463F6A5-51ED-4D6B-942E-18D4BE6C0DCB_1_105_c.png",
+        alt: "Muisto: spontaani",
+        note: "Spontaani kuva parhaasta seurasta.",
+      },
+      {
+        src: "/kuvia_0000s_0010_8E8122C8-F9A2-4001-B928-D8B2A3F14F07_1_105_c.png",
+        alt: "Muisto: ilta",
+        note: "Ilta, joka jäi mieleen.",
+      },
+      {
+        src: "/kuvia_0000s_0011_IMG_1333.png",
+        alt: "Muisto: katse",
+        note: "Kuva, jossa on meidän vibe.",
+      },
+      {
+        src: "/kuvia_0000s_0012_B33DE785-CB9E-4C27-8EDE-E321C30C8090_1_105_c.png",
+        alt: "Muisto: yhteinen",
+        note: "Yhdessä tekemisen fiilis.",
       },
     ],
   },
