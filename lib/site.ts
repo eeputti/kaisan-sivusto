@@ -35,6 +35,29 @@ export const site = {
     featuredGifTitle: "FEATURED GIF",
     featuredGifCaption: "cat on the strat (vaihda gif)",
   },
+  dateGame: {
+    goodTraits: [
+      "kaunein",
+      "ihanin",
+      "paras",
+      "söpöin",
+      "hyvä kommunikoimaan",
+      "ihana ajattelu",
+      "antaa elää vapaasti",
+      "herkkä",
+      "inspiroiva",
+    ],
+    badTraits: [
+      "mustasukkanen",
+      "tyhmä",
+      "epäpätevä",
+      "kontrollifriikki",
+      "kusipää!",
+      "ilkeä",
+    ],
+    secretTitle: "salainen juttu",
+    secretText: "oot mun paras juttu ja haluun olla sun kanssa ihan kaikessa.",
+  },
 
   shared: {
     tagline: "Hitting you different since always",

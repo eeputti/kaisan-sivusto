@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DateGame } from "@/components/DateGame";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
@@ -50,6 +51,9 @@ export default function HomePage() {
             </div>
           </RetroBox>
         </div>
+      </div>
+      <div className="homeGame">
+        <DateGame />
       </div>
     </LayoutFrame>
   );
