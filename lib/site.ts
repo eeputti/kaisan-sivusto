@@ -11,6 +11,7 @@ export const site = {
     { label: "Muistot", href: "/muistot" },
     { label: "Gear", href: "/gear" },
     { label: "Resources", href: "/resources" },
+    { label: "lahja", href: "/lahja" },
   ],
 
   home: {
@@ -18,6 +19,9 @@ export const site = {
     whatsNew:
       "tänään: kaisan oma internet-nurkka julkaistu. tavoitteena: olla mahdollisimman 1998 ja mahdollisimman meidän.",
     todo: "To do list: lisää kuvia, lisää 1 inside joke, lisää 1 yllätyslinkki.",
+    aboutTitle: "meistä",
+    aboutBody:
+      "pieni nurkka, jossa on meidän juttuja: kahvi, nauru, ja se että maailma tuntuu hyvältä kun ollaan samassa rytmissä.",
     links: [
       { label: "Google Photos", href: "https://photos.google.com/" },
       { label: "Spotify", href: "https://open.spotify.com/" },

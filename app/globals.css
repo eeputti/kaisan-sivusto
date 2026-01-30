@@ -203,6 +203,18 @@ a {
   margin-top: 8px;
 }
 
+.homeExtras{
+  display: grid;
+  gap: 12px;
+  padding: 0 12px 12px;
+}
+
+.homeInteractive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
 .btn88{
   display: inline-flex;
   align-items: center;
