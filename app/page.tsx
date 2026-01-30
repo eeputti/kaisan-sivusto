@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
+import { HeartMiniGame } from "@/components/HeartMiniGame";
+import { WouldYouRather } from "@/components/WouldYouRather";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -49,6 +51,17 @@ export default function HomePage() {
               <p className="p muted">{h.featuredGifCaption}</p>
             </div>
           </RetroBox>
+        </div>
+      </div>
+
+      <div className="homeExtras">
+        <RetroBox title={h.aboutTitle}>
+          <p className="p">{h.aboutBody}</p>
+        </RetroBox>
+
+        <div className="homeInteractive">
+          <HeartMiniGame />
+          <WouldYouRather />
         </div>
       </div>
     </LayoutFrame>

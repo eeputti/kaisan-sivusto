@@ -179,6 +179,18 @@ a {
   margin-top: 8px;
 }
 
+.homeExtras{
+  display: grid;
+  gap: 12px;
+  padding: 0 12px 12px;
+}
+
+.homeInteractive{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
 .btn88{
   display: inline-flex;
   align-items: center;
@@ -231,4 +243,57 @@ a {
 .cardTitle{
   font-size: 14px;
   margin: 0 0 6px 0;
+}
+
+.pageSection{
+  padding: 12px;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  font-size: 11px;
+  text-transform: lowercase;
+  margin-top: 8px;
+}
+
+.miniRow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.miniReveal{
+  margin-top: 10px;
+}
+
+.miniTitle{
+  margin: 8px 0 6px 0;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.wyrList{
+  display: grid;
+  gap: 12px;
+}
+
+.wyrItem{
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+.wyrItem:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.wyrButtons{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }

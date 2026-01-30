@@ -10,6 +10,7 @@ export const site = {
     { label: "Family", href: "/family" },
     { label: "Gear", href: "/gear" },
     { label: "Resources", href: "/resources" },
+    { label: "lahja", href: "/lahja" },
   ],
 
   home: {
@@ -17,6 +18,9 @@ export const site = {
     whatsNew:
       "tänään: kaisan oma internet-nurkka julkaistu. tavoitteena: olla mahdollisimman 1998 ja mahdollisimman meidän.",
     todo: "To do list: lisää kuvia, lisää 1 inside joke, lisää 1 yllätyslinkki.",
+    aboutTitle: "meistä",
+    aboutBody:
+      "pieni nurkka, jossa on meidän juttuja: kahvi, nauru, ja se että maailma tuntuu hyvältä kun ollaan samassa rytmissä.",
     links: [
       { label: "Google Photos", href: "https://photos.google.com/" },
       { label: "Spotify", href: "https://open.spotify.com/" },
@@ -101,5 +105,46 @@ export const site = {
         ],
       },
     ],
+  },
+
+  interactive: {
+    heartMiniGame: {
+      title: "mini-peli: 10 sydäntä",
+      buttonLabel: "raksauta sydämet!",
+      targetCount: 10,
+      unlockedPill: "unlocked",
+      secretTitle: "salainen viesti:",
+      secretText: "salaisuus: sun kanssa kaikki päivät tuntuu juhlalta.",
+    },
+    giftReveal: {
+      title: "synttärilahja",
+      steps: [
+        { text: "haluatko avata lahjan?", buttonLabel: "jooo!" },
+        { text: "ootko varma? 😳", buttonLabel: "jooo" },
+        { text: "paina vielä kerran (eelistä) ;) jooo", buttonLabel: "jooo" },
+      ],
+      reveal: {
+        pill: "reveal",
+        title: "ta-da! tässä se on",
+        text: "tää lahja on meidän yhteinen lupaus: lisää kahvia, lisää seikkailuja, lisää haleja.",
+        links: [
+          { label: "yllätyslinkki 1", href: "https://open.spotify.com" },
+          { label: "yllätyslinkki 2", href: "https://photos.google.com" },
+        ],
+      },
+    },
+    wouldYouRather: {
+      title: "kumpi mieluummin",
+      questions: [
+        { id: "kahvi-tee", prompt: "kahvi vai tee?", options: ["kahvi", "tee"] },
+        { id: "ilta-aamu", prompt: "ilta vai aamu?", options: ["ilta", "aamu"] },
+        { id: "reissu-koti", prompt: "reissu vai koti?", options: ["reissu", "koti"] },
+        { id: "kaisa-eelis", prompt: "kaisa vai eelis?", options: ["kaisa", "eelis"] },
+        { id: "meri-metsa", prompt: "meri vai metsä?", options: ["meri", "metsä"] },
+        { id: "makea-suolainen", prompt: "makea vai suolainen?", options: ["makea", "suolainen"] },
+        { id: "leffa-sarja", prompt: "leffa vai sarja?", options: ["leffa", "sarja"] },
+        { id: "peitto-tyyny", prompt: "peitto vai tyyny?", options: ["peitto", "tyyny"] },
+      ],
+    },
   },
 } as const;
