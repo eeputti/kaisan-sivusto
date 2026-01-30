@@ -99,7 +99,7 @@ export function DateGame() {
       </div>
       {isComplete && (
         <div className="traitSecret">
-          <p className="p">löysit kaikki jee, joko oot tehny kaikki pelit? :)</p>
+          <p className="p">löysit kaikki jee hyvä muru! :-)</p>
           <Link className="btn88" href="/minipeli">
             takaisin minipeleihin
           </Link>
