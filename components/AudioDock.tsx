@@ -88,15 +88,15 @@ export function AudioDock() {
     <section className="audioDock" aria-label="Audio dock">
       <div className="audioDockButtons">
         <button type="button" className="btn88 audioBtn" onClick={toggleMusic}>
-          musa: {musicOn ? "päällä" : "pois"}
+          {musicOn ? "laita musa pois" : "laita musa päälle"}
         </button>
         <button type="button" className="btn88 audioBtn" onClick={toggleVoice}>
           täs on pieni ääniviesti: {voiceOn ? "stop" : "play"}
         </button>
       </div>
       {hint ? <p className="audioHint muted">{hint}</p> : null}
-      <p className="audioHint muted">vaihda biisi: /public/media/music.mp3</p>
-      <audio ref={musicRef} src="/media/music.mp3" preload="auto" />
+      <p className="audioHint muted">soiva biisi: Autot - Kaipuu</p>
+      <audio ref={musicRef} src="/Autot%20-%20Kaipuu.mp3" preload="auto" />
       <audio
         ref={voiceRef}
         src="/media/voice.mp3"
