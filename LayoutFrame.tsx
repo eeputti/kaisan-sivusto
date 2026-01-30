@@ -1,0 +1,23 @@
+import { ReactNode } from "react";
+import { SiteHeader } from "@/components/SiteHeader";
+import { site } from "@/lib/site";
+
+export function LayoutFrame({
+  children,
+  active,
+}: {
+  children: ReactNode;
+  active?: string;
+}) {
+  return (
+    <main className="page">
+      <div className="frame">
+        <SiteHeader active={active} />
+        {children}
+        <footer className="footer">
+          <span>made with love + liikaa giffejä</span>
+        </footer>
+      </div>
+    </main>
+  );
+}
