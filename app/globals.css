@@ -352,6 +352,24 @@ a {
   gap: 10px;
 }
 
+.heartPlayArea{
+  position: relative;
+  margin-top: 10px;
+  height: 160px;
+  border: 1px dashed var(--border);
+  background: rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.heartButton{
+  position: absolute;
+  min-width: 0;
+  width: 36px;
+  height: 28px;
+  padding: 0;
+  font-size: 12px;
+}
+
 .miniReveal{
   margin-top: 10px;
   padding-top: 8px;
@@ -392,6 +410,13 @@ a {
 .giftStep{
   display: grid;
   gap: 10px;
+}
+
+.giftHeading{
+  margin: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 .giftStepText{

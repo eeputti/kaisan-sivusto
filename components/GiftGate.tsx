@@ -20,15 +20,13 @@ export function GiftGate() {
 
   return (
     <div className="giftGate">
-      <p className="p">
-        Kaikki minipelit pitää voittaa ennen kuin lahja aukeaa. Käy pelaamassa nämä:
-      </p>
+      <p className="p">tämä sivu aukeaa vasta, kun olet läpäissyt minipelit</p>
       <div className="buttons">
         <Link className="btn88" href="/minipeli/sydamet">
-          poksauta 10 sydäntä
+          raksauta 10 sydäntä
         </Link>
         <Link className="btn88" href="/minipeli/deittaus">
-          miksi mun pitäis deittailla sua?
+          miksi kaisa on paras -peli
         </Link>
         <Link className="btn88" href="/minipeli/valinta">
           valitsisitko mieluummin

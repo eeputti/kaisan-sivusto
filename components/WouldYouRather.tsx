@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
 
@@ -33,12 +34,28 @@ export function WouldYouRather() {
     setAnswers((prev) => ({ ...prev, [id]: option }));
   };
 
+  const getResponse = (id: string, option: string) => {
+    if (id === "coffee") {
+      return option === "aamukahvi"
+        ? "oikein!"
+        : "eepun vastaus ois ollu aamukahvi mut iltakävelyki on iha ok";
+    }
+    if (id === "movie") {
+      return option === "leffailta"
+        ? "oikein!"
+        : "eepun vastaus ois ollu toi toinen, mut vois kyl mennä piknikilleki täs sitku lämpenee :3";
+    }
+    if (id === "travel") {
+      return "molemmat oikein! nyt on nii paha kysymys et saa ottaa kyl molemmat";
+    }
+    return "";
+  };
+
   return (
     <RetroBox title={wouldYouRather.title}>
       <div className="wyrList">
         {wouldYouRather.questions.map((question) => (
           <div key={question.id} className="wyrItem">
-            <p className="p">{question.prompt}</p>
             <div className="wyrButtons">
               {question.options.map((option) => (
                 <button
@@ -52,11 +69,18 @@ export function WouldYouRather() {
               ))}
             </div>
             {answers[question.id] && (
-              <span className="pill">mun vastaus: {answers[question.id]}</span>
+              <p className="p muted">{getResponse(question.id, answers[question.id])}</p>
             )}
           </div>
         ))}
-        {isComplete && <span className="pill">minipeli läpi ✓</span>}
+        {isComplete && (
+          <div className="miniReveal">
+            <span className="pill">minipeli läpi!</span>
+            <Link className="btn88" href="/minipeli">
+              takaisin minipelit-sivulle
+            </Link>
+          </div>
+        )}
       </div>
     </RetroBox>
   );
