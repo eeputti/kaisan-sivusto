@@ -8,6 +8,7 @@ export const site = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Family", href: "/family" },
+    { label: "Muistot", href: "/muistot" },
     { label: "Gear", href: "/gear" },
     { label: "Resources", href: "/resources" },
   ],
@@ -122,6 +123,43 @@ export const site = {
           { label: "Ezgif", href: "https://ezgif.com/" },
           { label: "JS Paint", href: "https://jspaint.app/" },
         ],
+      },
+    ],
+  },
+
+  gallery: {
+    title: "# Muistot",
+    subtitle: "Klikkaa kuvaa nähdäksesi muiston isona.",
+    photos: [
+      {
+        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+        alt: "Iltavalo metsässä",
+        note: "Yksi niistä kävelyistä, joissa ilma tuntui pehmeältä.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+        alt: "Sumuinen järvi",
+        note: "Hiljaisuus + kahvi termarista.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+        alt: "Poutapilvet",
+        note: "Aamu, kun kaikki oli taas helppoa.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
+        alt: "Polku vuorille",
+        note: "Yhteinen seikkailu, vaikka matka oli lyhyt.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=900&q=80",
+        alt: "Taivas järven yllä",
+        note: "Se hetki, kun istuttiin vaan ja katsottiin kauas.",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80",
+        alt: "Kivinen ranta",
+        note: "Naurettiin ja heitettiin kiviä veteen.",
       },
     ],
   },

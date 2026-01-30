@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DateGame } from "@/components/DateGame";
+import { AudioDock } from "@/components/AudioDock";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
@@ -9,6 +9,7 @@ export default function HomePage() {
 
   return (
     <LayoutFrame active="/">
+      <AudioDock />
       <div className="homeGrid">
         <div className="homeLeft">
           <RetroBox title={h.whatsNewTitle}>

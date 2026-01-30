@@ -159,6 +159,30 @@ a {
   color: var(--muted);
 }
 
+.audioDock{
+  margin: 12px;
+  padding: 10px;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+  box-shadow:
+    inset 2px 2px 0 var(--bevelLight),
+    inset -2px -2px 0 var(--bevelDark);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.audioDockButtons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.audioBtn{
+  cursor: pointer;
+}
+.audioHint{
+  margin: 0;
+}
+
 /* layout grids */
 .homeGrid{
   display: grid;
@@ -305,4 +329,78 @@ a {
 .cardTitle{
   font-size: 14px;
   margin: 0 0 6px 0;
+}
+
+/* gallery */
+.galleryPage{
+  padding: 12px;
+  display: grid;
+  gap: 12px;
+}
+.galleryGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.galleryCard{
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  appearance: none;
+}
+.galleryCard:hover{
+  filter: brightness(1.05);
+}
+.galleryImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.galleryMeta{
+  margin-top: 8px;
+}
+
+/* lightbox */
+.lightboxOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 50;
+}
+.lightboxCard{
+  width: min(92vw, 820px);
+}
+.lightboxHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 2px solid var(--border);
+  background: rgba(255,255,255,0.05);
+}
+.lightboxTitle{
+  margin: 0;
+  font-size: 18px;
+}
+.lightboxBody{
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.lightboxImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.lightboxNote{
+  margin: 0;
 }
