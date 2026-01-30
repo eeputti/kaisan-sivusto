@@ -14,6 +14,11 @@ export default function GearPage() {
           <p className="muted">{gear.subtitle}</p>
           <div className="hr" />
           <Image src="/media/gear.png" alt="Gear doodle" width={220} height={140} />
+          <div className="gifStrip" aria-hidden="true">
+            <Image src="/media/tile.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/hero.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/media/button-anim.gif" alt="" width={48} height={48} className="gifSticker" />
+          </div>
         </RetroBox>
 
         {gear.sections.map((section) => (

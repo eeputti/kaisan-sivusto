@@ -145,6 +145,18 @@ a {
   align-items: center;
 }
 .stickerRow img { image-rendering: pixelated; }
+.gifStrip{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0;
+}
+.gifSticker{
+  border: 1px solid var(--border);
+  background: transparent;
+  image-rendering: pixelated;
+}
 
 /* retro box */
 .retroBox{
