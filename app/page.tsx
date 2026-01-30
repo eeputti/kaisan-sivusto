@@ -31,7 +31,6 @@ export default function HomePage() {
             </div>
             <iframe
               data-testid="embed-iframe"
-              className="spotifyEmbed"
               style={{ borderRadius: 12 }}
               src="https://open.spotify.com/embed/playlist/4wvhRktu3vyFw9fG6SSJFE?utm_source=generator&theme=0"
               width="40%"

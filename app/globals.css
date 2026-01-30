@@ -236,19 +236,6 @@ a {
   height: 40px;
 }
 
-.spotifyEmbed{
-  width: 40%;
-  max-width: 420px;
-  min-width: 240px;
-}
-
-@media (max-width: 640px){
-  .spotifyEmbed{
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 .btn88{
   display: inline-flex;
   align-items: center;

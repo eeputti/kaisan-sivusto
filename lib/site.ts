@@ -107,7 +107,7 @@ export const site = {
 
   shared: {
     tagline: "omistettu eräälle raksulle",
-    tinyTopLeft: "moi kaisuraksula!!! <333",
+    tinyTopLeft: "moi kaisulainenraksulainen!!! <3333",
   },
 
   about: {
@@ -119,7 +119,7 @@ export const site = {
       { id: "us", name: "Me", desc: "inside jokes, lenkit, kahvit, ja se fiilis että kaikki on ok.", age: "ongoing" },
       { id: "future", name: "Future", desc: "pieniä seikkailuja ja isoa turvaa.", age: "∞" }
     ],
-    footer: "love u <3",
+    footer: "oot raxu <3",
   },
 
   gear: {
