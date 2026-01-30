@@ -20,7 +20,7 @@ export function GiftGate() {
 
   return (
     <div className="giftGate">
-      <p className="p">tämä sivu aukeaa vasta, kun olet läpäissyt minipelit</p>
+      <p className="p">tee eka minipelit, sit tää aukee ;))</p>
       <div className="buttons">
         <Link className="btn88" href="/minipeli/sydamet">
           raksauta 10 sydäntä
