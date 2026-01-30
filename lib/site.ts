@@ -63,6 +63,53 @@ export const site = {
     secretTitle: "salainen juttu",
     secretText: "oot mun paras juttu ja haluun olla sun kanssa ihan kaikessa.",
   },
+  interactive: {
+    giftReveal: {
+      title: "pieni paljastus",
+      steps: [
+        { text: "Ootko valmis pieneen yllätykseen?", buttonLabel: "anna tulla" },
+        { text: "Tää sivu on vaan meille. 💛", buttonLabel: "kerro lisää" },
+        { text: "Nyt avataan se varsinainen juttu...", buttonLabel: "avaa" },
+      ],
+      reveal: {
+        pill: "lahja",
+        title: "Meidän seuraava seikkailu",
+        text: "Valitse yksi näistä ja tehdään siitä päivä, joka jää mieleen.",
+        links: [
+          { label: "Brunssi kahdestaan", href: "https://maps.google.com/?q=brunch" },
+          { label: "Pieni road trip", href: "https://maps.google.com/?q=road+trip" },
+        ],
+      },
+    },
+    heartMiniGame: {
+      title: "sydänpeli",
+      buttonLabel: "lähetä sydän",
+      targetCount: 5,
+      unlockedPill: "salaisuus",
+      secretTitle: "avaa salainen viesti",
+      secretText: "oot mun turva ja mun suosikki.",
+    },
+    wouldYouRather: {
+      title: "valitsisitko mieluummin",
+      questions: [
+        {
+          id: "coffee",
+          prompt: "Aamu kahvilla vai ilta kävelyllä?",
+          options: ["aamukahvi", "iltakävely"],
+        },
+        {
+          id: "movie",
+          prompt: "Leffailta kotona vai piknik ulkona?",
+          options: ["leffailta", "piknik"],
+        },
+        {
+          id: "travel",
+          prompt: "Pieni road trip vai kaupunkiloma?",
+          options: ["road trip", "kaupunkiloma"],
+        },
+      ],
+    },
+  },
 
   shared: {
     tagline: "Hitting you different since always",
