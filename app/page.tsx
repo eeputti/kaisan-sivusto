@@ -20,7 +20,6 @@ export default function HomePage() {
         </div>
 
         <div className="homeRight">
-          <div className="homeSpacer" aria-hidden="true" />
           <RetroBox title={h.latestAlbumTitle}>
             <div className="featured">
               <Image src="/media/album.png" alt="Album cover" width={72} height={72} />
