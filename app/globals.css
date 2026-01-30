@@ -159,6 +159,30 @@ a {
   color: var(--muted);
 }
 
+.audioDock{
+  margin: 12px;
+  padding: 10px;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+  box-shadow:
+    inset 2px 2px 0 var(--bevelLight),
+    inset -2px -2px 0 var(--bevelDark);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.audioDockButtons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.audioBtn{
+  cursor: pointer;
+}
+.audioHint{
+  margin: 0;
+}
+
 /* layout grids */
 .homeGrid{
   display: grid;
@@ -233,50 +257,76 @@ a {
   margin: 0 0 6px 0;
 }
 
-.toastStack{
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+/* gallery */
+.galleryPage{
+  padding: 12px;
+  display: grid;
+  gap: 12px;
 }
-
-.toastCard{
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.20);
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark),
-    0 10px 24px rgba(0,0,0,0.3);
-  padding: 10px 12px;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  max-width: 320px;
+.galleryGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
 }
-
-.toastMessage{
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.toastClose{
-  margin-left: auto;
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.25);
-  color: var(--text);
-  width: 22px;
-  height: 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.galleryCard{
+  text-align: left;
+  color: inherit;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
+  font: inherit;
+  appearance: none;
 }
-.toastClose:hover{ filter: brightness(1.08); }
+.galleryCard:hover{
+  filter: brightness(1.05);
+}
+.galleryImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.galleryMeta{
+  margin-top: 8px;
+}
+
+/* lightbox */
+.lightboxOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 50;
+}
+.lightboxCard{
+  width: min(92vw, 820px);
+}
+.lightboxHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 2px solid var(--border);
+  background: rgba(255,255,255,0.05);
+}
+.lightboxTitle{
+  margin: 0;
+  font-size: 18px;
+}
+.lightboxBody{
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.lightboxImage{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.lightboxNote{
+  margin: 0;
+}
