@@ -26,23 +26,21 @@ export default function HomePage() {
         <div className="homeRight">
           <RetroBox title={h.latestAlbumTitle}>
             <div className="featured">
-              <Image src="/media/album.png" alt="Album cover" width={72} height={72} />
+              <Image src="/eelis%20ja%20kaisa.png" alt="Mixtape cover" width={72} height={72} />
               <div>
                 <div>{h.latestAlbumName}</div>
                 <div className="muted">{h.latestAlbumDate}</div>
               </div>
             </div>
-            <iframe
-              data-testid="embed-iframe"
-              style={{ borderRadius: 12 }}
-              src="https://open.spotify.com/embed/playlist/4wvhRktu3vyFw9fG6SSJFE?utm_source=generator&theme=0"
-              width="40%"
-              height="152"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
+            <a
+              href="https://open.spotify.com/playlist/4wvhRktu3vyFw9fG6SSJFE?si=3e0a11d701884d0e"
+              className="p"
+              style={{ display: "inline-block", marginTop: 12, textDecoration: "underline" }}
+              rel="noreferrer"
+              target="_blank"
+            >
+              käy kuuntelee ;))
+            </a>
             <p className="p" style={{ marginTop: 12 }}>
               tän listan musiikin lisäks musiikkii korville on seuraavat asiat:
             </p>
