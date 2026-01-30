@@ -13,16 +13,16 @@ export const site = {
   ],
 
   home: {
-    whatsNewTitle: "What's New",
+    whatsNewTitle: "uusinta uutta!",
     whatsNew:
       "tänään: kaisan oma internet-nurkka julkaistu. tavoitteena: olla mahdollisimman 1998 ja mahdollisimman meidän.",
     todo: "To do list: lisää kuvia, lisää 1 inside joke, lisää 1 yllätyslinkki.",
     aboutTitle: "meistä",
     aboutBody:
       "pieni nurkka, jossa on meidän juttuja: kahvi, nauru, ja se että maailma tuntuu hyvältä kun ollaan samassa rytmissä.",
-    latestAlbumTitle: "LATEST ALBUM",
+    latestAlbumTitle: "uusin mixtape",
     latestAlbumName: "kaisan + eeliksen mixtape",
-    latestAlbumDate: "01/30/2026",
+    latestAlbumDate: "08/02",
     latestAlbumTracks: [
       "1. sun nauru",
       "2. meidän aamut",
