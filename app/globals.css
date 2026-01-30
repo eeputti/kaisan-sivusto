@@ -412,6 +412,10 @@ a {
   gap: 10px;
 }
 
+.giftStep .btn88{
+  justify-self: start;
+}
+
 .giftHeading{
   margin: 0;
   font-size: 22px;
