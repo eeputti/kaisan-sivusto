@@ -13,8 +13,8 @@ export default function ResourcesPage() {
           <h2 style={{ margin: 0, fontSize: 18 }}>{r.title}</h2>
           <p className="muted">{r.subtitle}</p>
           <p className="muted">
-            <Link href="/">Home</Link> | <Link href="/family">Family</Link> |{" "}
-            <Link href="/gear">Gear</Link> | <Link href="/resources">Resources</Link>
+            <Link href="/">koti</Link> | <Link href="/minipeli">minipelit</Link> |{" "}
+            <Link href="/muistot">muistot</Link>
           </p>
         </RetroBox>
 

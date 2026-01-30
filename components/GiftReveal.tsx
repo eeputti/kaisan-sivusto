@@ -19,7 +19,7 @@ export function GiftReveal() {
     <RetroBox title={giftReveal.title}>
       {!isRevealed && currentStep ? (
         <div className="giftStep">
-          <p className="p">{currentStep.text}</p>
+          <p className={`giftStepText ${currentStep.size ?? "normal"}`}>{currentStep.text}</p>
           <button type="button" className="btn88" onClick={handleClick}>
             {currentStep.buttonLabel}
           </button>

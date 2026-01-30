@@ -1,14 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
 
 type Answers = Record<string, string>;
+const STORAGE_KEY = "minipeli:valinta";
 
 export function WouldYouRather() {
   const { wouldYouRather } = site.interactive;
   const [answers, setAnswers] = useState<Answers>({});
+  const isComplete = wouldYouRather.questions.every((question) => answers[question.id]);
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      try {
+        setAnswers(JSON.parse(stored) as Answers);
+      } catch {
+        window.localStorage.removeItem(STORAGE_KEY);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isComplete) {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
+    }
+  }, [answers, isComplete]);
 
   const handleAnswer = (id: string, option: string) => {
     setAnswers((prev) => ({ ...prev, [id]: option }));
@@ -37,6 +56,7 @@ export function WouldYouRather() {
             )}
           </div>
         ))}
+        {isComplete && <span className="pill">minipeli läpi ✓</span>}
       </div>
     </RetroBox>
   );

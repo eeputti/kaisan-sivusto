@@ -1,13 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
+
+const STORAGE_KEY = "minipeli:sydamet";
 
 export function HeartMiniGame() {
   const { heartMiniGame } = site.interactive;
   const [count, setCount] = useState(0);
   const hasUnlocked = count >= heartMiniGame.targetCount;
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (stored === "done") {
+      setCount(heartMiniGame.targetCount);
+    }
+  }, [heartMiniGame.targetCount]);
+
+  useEffect(() => {
+    if (hasUnlocked) {
+      window.localStorage.setItem(STORAGE_KEY, "done");
+    }
+  }, [hasUnlocked]);
 
   const handleClick = () => {
     setCount((prev) => Math.min(prev + 1, heartMiniGame.targetCount));
