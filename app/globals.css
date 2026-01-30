@@ -233,6 +233,80 @@ a {
   margin: 10px 0;
 }
 
+.homeGame{
+  padding: 0 12px 12px;
+}
+
+.dateGame .p{ margin-bottom: 8px; }
+
+.traitGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+}
+
+.traitItem{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.traitButton{
+  border: 2px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+  font-size: 12px;
+  padding: 8px 10px;
+  text-transform: lowercase;
+  cursor: pointer;
+  box-shadow:
+    inset 2px 2px 0 var(--bevelLight),
+    inset -2px -2px 0 var(--bevelDark);
+}
+
+.traitButton:hover{ filter: brightness(1.05); }
+.traitButton:disabled{ cursor: not-allowed; }
+
+.traitSelected .traitButton{
+  border-color: rgba(167,255,181,0.8);
+  box-shadow:
+    inset 2px 2px 0 rgba(167,255,181,0.35),
+    inset -2px -2px 0 rgba(0,0,0,0.45);
+}
+
+.traitDismissed{
+  opacity: 0.35;
+  transform: scale(0.98);
+  pointer-events: none;
+}
+
+.traitNote{
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.traitProgress{
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.traitProgress.show{ opacity: 1; }
+
+.traitSecret{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255,255,255,0.25);
+}
+
+.traitSecretTitle{
+  font-size: 13px;
+  margin-bottom: 6px;
+  text-transform: lowercase;
+}
+
 .familyGrid{
   display: grid;
   grid-template-columns: 280px 1fr;

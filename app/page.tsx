@@ -53,6 +53,9 @@ export default function HomePage() {
           </RetroBox>
         </div>
       </div>
+      <div className="homeGame">
+        <DateGame />
+      </div>
     </LayoutFrame>
   );
 }
