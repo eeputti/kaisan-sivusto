@@ -2,8 +2,7 @@ import Image from "next/image";
 import { AudioDock } from "@/components/AudioDock";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
-import { HeartMiniGame } from "@/components/HeartMiniGame";
-import { WouldYouRather } from "@/components/WouldYouRather";
+import { DateGame } from "@/components/DateGame";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
