@@ -33,7 +33,7 @@ export function DateGame() {
   const isComplete = selectedGood.size === goodTraits.length;
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const stored = window.sessionStorage.getItem(STORAGE_KEY);
     if (stored === "done") {
       setSelectedGood(new Set(goodTraits));
     }
@@ -41,7 +41,7 @@ export function DateGame() {
 
   useEffect(() => {
     if (isComplete) {
-      window.localStorage.setItem(STORAGE_KEY, "done");
+      window.sessionStorage.setItem(STORAGE_KEY, "done");
     }
   }, [isComplete]);
 
