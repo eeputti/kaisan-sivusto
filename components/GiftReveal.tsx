@@ -19,13 +19,17 @@ export function GiftReveal() {
     <RetroBox title={giftReveal.title}>
       {!isRevealed && currentStep ? (
         <div className="giftStep">
-          <p className={`giftStepText ${currentStep.size ?? "normal"}`}>{currentStep.text}</p>
+          <h2 className="giftHeading">{giftReveal.heading}</h2>
+          {currentStep.text && (
+            <p className={`giftStepText ${currentStep.size ?? "normal"}`}>{currentStep.text}</p>
+          )}
           <button type="button" className="btn88" onClick={handleClick}>
             {currentStep.buttonLabel}
           </button>
         </div>
       ) : (
         <div className="giftReveal">
+          <h2 className="giftHeading">{giftReveal.heading}</h2>
           <span className="pill">{giftReveal.reveal.pill}</span>
           <h3 className="miniTitle">{giftReveal.reveal.title}</h3>
           <p className="p">{giftReveal.reveal.text}</p>

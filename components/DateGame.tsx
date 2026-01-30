@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { site } from "@/lib/site";
 import { RetroBox } from "@/components/RetroBox";
 
@@ -13,17 +14,21 @@ type Trait = {
 };
 
 export function DateGame() {
-  const { goodTraits, badTraits, secretTitle, secretText } = site.dateGame;
+  const { goodTraits, badTraits } = site.dateGame;
   const [selectedGood, setSelectedGood] = useState<Set<string>>(new Set());
   const [dismissedBad, setDismissedBad] = useState<Record<string, string>>({});
 
-  const traits = useMemo<Trait[]>(
-    () => [
+  const traits = useMemo<Trait[]>(() => {
+    const combined = [
       ...goodTraits.map((label) => ({ label, good: true })),
       ...badTraits.map((label) => ({ label, good: false })),
-    ],
-    [goodTraits, badTraits],
-  );
+    ];
+    for (let i = combined.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [combined[i], combined[j]] = [combined[j], combined[i]];
+    }
+    return combined;
+  }, [goodTraits, badTraits]);
 
   const isComplete = selectedGood.size === goodTraits.length;
 
@@ -63,8 +68,9 @@ export function DateGame() {
   };
 
   return (
-    <RetroBox title="miksi mun pitäis deittailla sua?" className="dateGame">
-      <p className="p muted">valitse kaikki hyvät jutut jatkaaksesi.</p>
+    <RetroBox title="miksi kaisa on paras -peli" className="dateGame">
+      <p className="p muted">miksi kaisa on paras?</p>
+      <p className="p muted">valitse kaikki kaisan ominaisuudet</p>
       <div className="traitGrid">
         {traits.map((trait) => {
           const isSelected = selectedGood.has(trait.label);
@@ -91,11 +97,12 @@ export function DateGame() {
           );
         })}
       </div>
-      <p className={`traitProgress ${isComplete ? "show" : ""}`}>löysit kaikki jee</p>
       {isComplete && (
         <div className="traitSecret">
-          <div className="traitSecretTitle">{secretTitle}</div>
-          <p className="p">{secretText}</p>
+          <p className="p">löysit kaikki jee, joko oot tehny kaikki pelit? :)</p>
+          <Link className="btn88" href="/minipeli">
+            takaisin minipeleihin
+          </Link>
         </div>
       )}
     </RetroBox>

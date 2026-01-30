@@ -14,7 +14,7 @@ export default function ResourcesPage() {
           <p className="muted">{r.subtitle}</p>
           <p className="muted">
             <Link href="/">koti</Link> | <Link href="/minipeli">minipelit</Link> |{" "}
-            <Link href="/muistot">muistot</Link>
+            <Link href="/muistot">muistot</Link> | <Link href="/lahja">lahja</Link>
           </p>
         </RetroBox>
 
