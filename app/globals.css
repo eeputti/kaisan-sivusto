@@ -480,6 +480,14 @@ a {
   flex-wrap: wrap;
 }
 
+.minipeliGif{
+  width: 120px;
+  height: auto;
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  background: var(--bg);
+}
+
 .themeSwitcher{
   display: inline-flex;
   align-items: center;
