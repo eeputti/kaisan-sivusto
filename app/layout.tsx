@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Toasts } from "@/components/Toasts";
+import { MusicProvider } from "@/components/MusicProvider";
 
 export const metadata: Metadata = {
   title: site.meta.title,
@@ -12,8 +13,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fi">
       <body>
-        {children}
-        <Toasts />
+        <MusicProvider>
+          {children}
+          <Toasts />
+        </MusicProvider>
       </body>
     </html>
   );
