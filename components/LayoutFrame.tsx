@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
-import { site } from "@/lib/site";
 
 export function LayoutFrame({
   children,

@@ -23,7 +23,9 @@ export default function ResourcesPage() {
             <p className="p" style={{ marginBottom: 0 }}>
               {g.links.map((l, i) => (
                 <span key={l.href}>
-                  <a href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
+                  <a href={l.href} target="_blank" rel="noreferrer">
+                    {l.label}
+                  </a>
                   {i < g.links.length - 1 ? " " : ""}
                 </span>
               ))}
