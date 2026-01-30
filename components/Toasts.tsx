@@ -8,8 +8,8 @@ type Toast = {
 };
 
 const SECOND_MESSAGES = [
-  "eelis haluis pusun… on menny jo 2 min...",
-  "eelis haluis pusun… kaks minuuttia jo, missä sä oot?",
+  "eelis haluis pusun ku on menny jo kaks minuuttii mwahmwah",
+  "eelis haluis pusun ku on menny jo kaks minuuttii mwahmwah",
 ];
 
 export function Toasts() {
