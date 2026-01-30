@@ -1,17 +1,14 @@
 export const site = {
   meta: {
-    title: "kaisalle 💛",
+    title: "kaisalle <3",
     description: "pieni sivusto, jossa on iso tunne",
   },
 
   // sama rakenne kuin mallisivussa: Home | Family | Gear | Resources
   nav: [
-    { label: "Home", href: "/" },
-    { label: "Family", href: "/family" },
-    { label: "Muistot", href: "/muistot" },
-    { label: "Gear", href: "/gear" },
-    { label: "Resources", href: "/resources" },
-    { label: "lahja", href: "/lahja" },
+    { label: "koti", href: "/" },
+    { label: "minipelit", href: "/minipeli" },
+    { label: "muistot", href: "/muistot" },
   ],
 
   home: {
@@ -22,13 +19,8 @@ export const site = {
     aboutTitle: "meistä",
     aboutBody:
       "pieni nurkka, jossa on meidän juttuja: kahvi, nauru, ja se että maailma tuntuu hyvältä kun ollaan samassa rytmissä.",
-    links: [
-      { label: "Google Photos", href: "https://photos.google.com/" },
-      { label: "Spotify", href: "https://open.spotify.com/" },
-      { label: "Instagram", href: "https://instagram.com/" },
-    ],
     latestAlbumTitle: "LATEST ALBUM",
-    latestAlbumName: "kaisalle (mixtape)",
+    latestAlbumName: "kaisan + eeliksen mixtape",
     latestAlbumDate: "01/30/2026",
     latestAlbumTracks: [
       "1. sun nauru",
@@ -67,9 +59,13 @@ export const site = {
     giftReveal: {
       title: "pieni paljastus",
       steps: [
-        { text: "Ootko valmis pieneen yllätykseen?", buttonLabel: "anna tulla" },
-        { text: "Tää sivu on vaan meille. 💛", buttonLabel: "kerro lisää" },
-        { text: "Nyt avataan se varsinainen juttu...", buttonLabel: "avaa" },
+        { text: "Ootko valmis yllätykseen?", buttonLabel: "anna tulla", size: "normal" },
+        { text: "OOTKO VALMIS!!??", buttonLabel: "no oon oon!!", size: "big" },
+        {
+          text: "OOKSÄÄ OIKEEST VALMIS?!?!?!",
+          buttonLabel: "joojoo anna lahja muru :3",
+          size: "mega",
+        },
       ],
       reveal: {
         pill: "lahja",
@@ -82,11 +78,11 @@ export const site = {
       },
     },
     heartMiniGame: {
-      title: "sydänpeli",
-      buttonLabel: "lähetä sydän",
-      targetCount: 5,
-      unlockedPill: "salaisuus",
-      secretTitle: "avaa salainen viesti",
+      title: "raksuta 10 sydäntä",
+      buttonLabel: "poksauta sydän",
+      targetCount: 10,
+      unlockedPill: "valmis",
+      secretTitle: "sydänpeli läpi",
       secretText: "oot mun turva ja mun suosikki.",
     },
     wouldYouRather: {
@@ -112,8 +108,8 @@ export const site = {
   },
 
   shared: {
-    tagline: "Hitting you different since always",
-    tinyTopLeft: "Hi :)",
+    tagline: "omistettu eräälle raksulle",
+    tinyTopLeft: "moi kaisulainenraksulainen!!! <3333",
   },
 
   about: {

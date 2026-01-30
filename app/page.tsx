@@ -2,7 +2,6 @@ import Image from "next/image";
 import { AudioDock } from "@/components/AudioDock";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
-import { DateGame } from "@/components/DateGame";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -18,19 +17,10 @@ export default function HomePage() {
             <div className="hr" />
             <p className="p muted">{h.todo}</p>
           </RetroBox>
-
-          <RetroBox title="Quick Links" className="homeLinks">
-            <div className="buttons">
-              {h.links.map((link) => (
-                <a key={link.href} className="btn88" href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </RetroBox>
         </div>
 
         <div className="homeRight">
+          <div className="homeSpacer" aria-hidden="true" />
           <RetroBox title={h.latestAlbumTitle}>
             <div className="featured">
               <Image src="/media/album.png" alt="Album cover" width={72} height={72} />
@@ -39,6 +29,27 @@ export default function HomePage() {
                 <div className="muted">{h.latestAlbumDate}</div>
               </div>
             </div>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: 12 }}
+              src="https://open.spotify.com/embed/playlist/4wvhRktu3vyFw9fG6SSJFE?utm_source=generator&theme=0"
+              width="40%"
+              height="152"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+            <p className="p" style={{ marginTop: 12 }}>
+              tän listan musiikin lisäks musiikkii korville on seuraavat asiat:
+            </p>
+            <ol className="list">
+              <li>sun pusut</li>
+              <li>sun naurut</li>
+              <li>meiän nukkumiset</li>
+              <li>treffit</li>
+              <li>kaikki hetket sunkaa</li>
+            </ol>
             <ul className="list">
               {h.latestAlbumTracks.map((track) => (
                 <li key={track}>{track}</li>
@@ -53,9 +64,6 @@ export default function HomePage() {
             </div>
           </RetroBox>
         </div>
-      </div>
-      <div className="homeGame">
-        <DateGame />
       </div>
     </LayoutFrame>
   );

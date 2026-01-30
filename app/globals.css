@@ -1,18 +1,32 @@
 :root {
-  --bg: #0b1b2a;
-  --tileOpacity: 0.22;
-
-  --panel: #0f2a3d;
-
-  --text: #eaf2ff;
-  --muted: #b9c7df;
-  --link: #a7ffb5;
-  --border: rgba(255, 255, 255, 0.25);
-
-  --bevelLight: rgba(255, 255, 255, 0.35);
-  --bevelDark: rgba(0, 0, 0, 0.45);
-
+  --bg: #ffffff;
+  --panel: transparent;
+  --text: #000000;
+  --muted: #000000;
+  --link: #000000;
+  --border: #000000;
+  --accent: #000000;
   --max: 980px;
+}
+
+[data-theme="night"] {
+  --bg: #000000;
+  --panel: transparent;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --link: #ffffff;
+  --border: #ffffff;
+  --accent: #ffffff;
+}
+
+[data-theme="fun"] {
+  --bg: #ff66c4;
+  --panel: transparent;
+  --text: #0b1020;
+  --muted: #0b1020;
+  --link: #0b1020;
+  --border: #0b1020;
+  --accent: #00ff95;
 }
 
 * { box-sizing: border-box; }
@@ -22,7 +36,7 @@ html, body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "MS Sans Serif";
+  font-family: "Courier New", Courier, "Lucida Console", "MS Sans Serif", monospace;
 }
 
 a {
@@ -37,22 +51,31 @@ a {
 }
 
 /* tiled bg vibe (optional file) */
-.page::before{
+.page::before{ content:none; }
+
+[data-theme="fun"] .page::before{
   content:"";
   position: fixed;
   inset: 0;
-  background-image: url("/media/tile.gif");
-  background-size: 160px 160px;
-  opacity: var(--tileOpacity);
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.4), rgba(0,0,0,0) 50%),
+    linear-gradient(90deg, rgba(0,255,149,0.35) 0%, rgba(255,102,196,0.35) 50%, rgba(0,0,0,0) 100%),
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 60% 70%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 35% 80%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.15) 0 2px, transparent 2px 4px);
+  background-size: cover, cover, 120px 120px, 160px 160px, 200px 200px, 240px 240px, 6px 6px;
+  image-rendering: pixelated;
   pointer-events: none;
+  opacity: 0.8;
 }
 
 .frame{
   max-width: var(--max);
   margin: 0 auto;
-  border: 2px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  border: none;
+  background: transparent;
   position: relative;
 }
 
@@ -61,11 +84,15 @@ a {
   justify-content: space-between;
   gap: 12px;
   padding: 8px 10px;
-  border-bottom: 2px solid var(--border);
-  background: rgba(0,0,0,0.22);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
   font-size: 12px;
 }
-.topLineRight { opacity: 0.85; }
+.topLineRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .hero{
   display: flex;
@@ -73,14 +100,13 @@ a {
   justify-content: space-between;
   padding: 14px 12px;
   gap: 12px;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .h1{
   margin: 0 0 6px 0;
-  font-size: 32px;
-  letter-spacing: 0.5px;
-  text-transform: lowercase;
+  font-size: 34px;
+  letter-spacing: 0.2px;
 }
 .sub{
   margin: 0 0 10px 0;
@@ -98,11 +124,8 @@ a {
 .heroGifWrap{
   width: 220px;
   height: 160px;
-  background: rgba(0,0,0,0.25);
-  border: 2px solid var(--border);
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
+  background: transparent;
+  border: 1px solid var(--border);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -118,28 +141,25 @@ a {
   display: flex;
   gap: 10px;
   padding: 10px 12px;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
   align-items: center;
 }
 .stickerRow img { image-rendering: pixelated; }
 
 /* retro box */
 .retroBox{
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.20);
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
+  border: none;
+  background: transparent;
 }
 .retroBoxTitle{
-  padding: 8px 10px;
-  border-bottom: 2px solid var(--border);
-  background: rgba(255,255,255,0.06);
+  padding: 0 0 6px;
+  border-bottom: none;
+  background: transparent;
   font-size: 13px;
   text-transform: lowercase;
 }
 .retroBoxBody{
-  padding: 10px;
+  padding: 0 0 16px;
 }
 
 .p{ margin: 0 0 10px 0; line-height: 1.35; }
@@ -153,20 +173,17 @@ a {
 
 .footer{
   padding: 10px 12px;
-  border-top: 2px solid var(--border);
-  background: rgba(0,0,0,0.22);
+  border-top: 1px solid var(--border);
+  background: transparent;
   font-size: 12px;
   color: var(--muted);
 }
 
 .audioDock{
   margin: 12px;
-  padding: 10px;
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.2);
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
+  padding: 0;
+  border: none;
+  background: transparent;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -215,6 +232,10 @@ a {
   gap: 12px;
 }
 
+.homeSpacer{
+  height: 40px;
+}
+
 .btn88{
   display: inline-flex;
   align-items: center;
@@ -222,15 +243,17 @@ a {
   height: 31px;
   min-width: 88px;
   padding: 0 10px;
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.25);
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
+  border: 1px solid var(--border);
+  background: transparent;
   text-decoration: none;
   font-size: 12px;
+  color: var(--text);
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.btn88:hover{ filter: brightness(1.06); }
+.btn88:hover{
+  background: var(--accent);
+  color: var(--bg);
+}
 
 .featured{
   display: flex;
@@ -241,12 +264,8 @@ a {
 
 .hr{
   height: 1px;
-  background: rgba(255,255,255,0.18);
+  background: var(--border);
   margin: 10px 0;
-}
-
-.homeGame{
-  padding: 0 12px 12px;
 }
 
 .dateGame .p{ margin-bottom: 8px; }
@@ -265,32 +284,36 @@ a {
 }
 
 .traitButton{
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--border);
+  background: transparent;
   color: var(--text);
   font-size: 12px;
   padding: 8px 10px;
   text-transform: lowercase;
   cursor: pointer;
-  box-shadow:
-    inset 2px 2px 0 var(--bevelLight),
-    inset -2px -2px 0 var(--bevelDark);
 }
 
-.traitButton:hover{ filter: brightness(1.05); }
 .traitButton:disabled{ cursor: not-allowed; }
 
 .traitSelected .traitButton{
-  border-color: rgba(167,255,181,0.8);
-  box-shadow:
-    inset 2px 2px 0 rgba(167,255,181,0.35),
-    inset -2px -2px 0 rgba(0,0,0,0.45);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.traitWrong .traitButton{
+  background: var(--accent);
+  color: var(--bg);
 }
 
 .traitDismissed{
   opacity: 0.35;
   transform: scale(0.98);
   pointer-events: none;
+}
+
+.traitWrong{
+  opacity: 1;
+  transform: none;
 }
 
 .traitNote{
@@ -310,13 +333,153 @@ a {
 .traitSecret{
   margin-top: 10px;
   padding-top: 8px;
-  border-top: 1px dashed rgba(255,255,255,0.25);
+  border-top: 1px dashed var(--border);
 }
 
 .traitSecretTitle{
   font-size: 13px;
   margin-bottom: 6px;
   text-transform: lowercase;
+}
+
+.pageSection{
+  padding: 12px;
+}
+
+.miniRow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.miniReveal{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.miniTitle{
+  margin: 8px 0 6px;
+  font-size: 16px;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: lowercase;
+}
+
+.wyrList{
+  display: grid;
+  gap: 12px;
+}
+
+.wyrItem{
+  display: grid;
+  gap: 6px;
+}
+
+.wyrButtons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.giftStep{
+  display: grid;
+  gap: 10px;
+}
+
+.giftStepText{
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.giftStepText.normal{ font-size: 16px; }
+.giftStepText.big{ font-size: 26px; }
+.giftStepText.mega{ font-size: 32px; }
+
+.giftGate{
+  display: grid;
+  gap: 12px;
+}
+
+.minipeliList{
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.minipeliItem{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.themeSwitcher{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.themeLabel{
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.themeSelect{
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+.themeSelect option{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.toastStack{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: var(--bg);
+  z-index: 2000;
+}
+
+.toastCard{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  background: transparent;
+  max-width: 520px;
+}
+
+.toastMessage{
+  font-size: 16px;
+}
+
+.toastClose{
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
 }
 
 .familyGrid{
@@ -331,11 +494,11 @@ a {
 
 .jump a{
   text-decoration: none;
-  border-bottom: 1px dotted rgba(255,255,255,0.35);
+  border-bottom: 1px dotted var(--border);
 }
 .card{
-  border: 2px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.18);
+  border: none;
+  background: transparent;
   padding: 10px;
 }
 .cardTitle{
@@ -361,15 +524,12 @@ a {
   font: inherit;
   appearance: none;
 }
-.galleryCard:hover{
-  filter: brightness(1.05);
-}
 .galleryImage{
   width: 100%;
   height: auto;
   display: block;
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.2);
+  border: none;
+  background: transparent;
 }
 .galleryMeta{
   margin-top: 8px;
@@ -379,7 +539,7 @@ a {
 .lightboxOverlay{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.72);
+  background: var(--bg);
   display: grid;
   place-items: center;
   padding: 20px;
@@ -394,8 +554,8 @@ a {
   justify-content: space-between;
   gap: 12px;
   padding: 10px;
-  border-bottom: 2px solid var(--border);
-  background: rgba(255,255,255,0.05);
+  border-bottom: none;
+  background: transparent;
 }
 .lightboxTitle{
   margin: 0;
@@ -410,8 +570,8 @@ a {
   width: 100%;
   height: auto;
   display: block;
-  border: 2px solid var(--border);
-  background: rgba(0,0,0,0.2);
+  border: none;
+  background: transparent;
 }
 .lightboxNote{
   margin: 0;
