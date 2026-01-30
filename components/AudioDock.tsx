@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export function AudioDock() {
   const musicRef = useRef<HTMLAudioElement | null>(null);
   const voiceRef = useRef<HTMLAudioElement | null>(null);
-  const [musicOn, setMusicOn] = useState(false);
+  const [musicOn, setMusicOn] = useState(true);
   const [voiceOn, setVoiceOn] = useState(false);
   const [hint, setHint] = useState("");
 
@@ -21,7 +21,6 @@ export function AudioDock() {
       setHint("");
       return true;
     } catch (error) {
-      setMusicOn(false);
       setHint("musa on mykistetty — klikkaa nappia jos haluut äänen");
       return false;
     }
@@ -36,11 +35,12 @@ export function AudioDock() {
 
   useEffect(() => {
     const handleFirstInteraction = () => {
-      if (!musicOn) {
+      if (musicOn) {
         void attemptMusicPlay();
       }
     };
 
+    void attemptMusicPlay();
     window.addEventListener("pointerdown", handleFirstInteraction, { once: true });
     return () => window.removeEventListener("pointerdown", handleFirstInteraction);
   }, [attemptMusicPlay, musicOn]);
@@ -57,7 +57,10 @@ export function AudioDock() {
       return;
     }
 
-    await attemptMusicPlay();
+    const played = await attemptMusicPlay();
+    if (played) {
+      setMusicOn(true);
+    }
   };
 
   const toggleVoice = async () => {
@@ -92,6 +95,7 @@ export function AudioDock() {
         </button>
       </div>
       {hint ? <p className="audioHint muted">{hint}</p> : null}
+      <p className="audioHint muted">vaihda biisi: /public/media/music.mp3</p>
       <audio ref={musicRef} src="/media/music.mp3" preload="auto" />
       <audio
         ref={voiceRef}

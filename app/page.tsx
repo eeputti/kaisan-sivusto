@@ -57,12 +57,6 @@ export default function HomePage() {
             </ul>
           </RetroBox>
 
-          <RetroBox title={h.featuredGifTitle}>
-            <div className="featured">
-              <Image src="/media/featured.gif" alt="Featured gif" width={120} height={90} />
-              <p className="p muted">{h.featuredGifCaption}</p>
-            </div>
-          </RetroBox>
         </div>
       </div>
     </LayoutFrame>

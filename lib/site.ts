@@ -29,8 +29,6 @@ export const site = {
       "4. se yks ilta",
       "5. vielä yks kierros",
     ],
-    featuredGifTitle: "FEATURED GIF",
-    featuredGifCaption: "cat on the strat (vaihda gif)",
   },
   dateGame: {
     goodTraits: [
@@ -121,7 +119,7 @@ export const site = {
       { id: "us", name: "Me", desc: "inside jokes, lenkit, kahvit, ja se fiilis että kaikki on ok.", age: "ongoing" },
       { id: "future", name: "Future", desc: "pieniä seikkailuja ja isoa turvaa.", age: "∞" }
     ],
-    footer: "love u <3",
+    footer: "oot raxu <3",
   },
 
   gear: {
