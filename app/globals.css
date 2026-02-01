@@ -123,7 +123,7 @@ a {
 
 .heroGifWrap{
   width: 220px;
-  height: 160px;
+  aspect-ratio: 1 / 1;
   background: transparent;
   border: 1px solid var(--border);
   display: grid;
@@ -133,7 +133,7 @@ a {
 .heroGif{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   image-rendering: pixelated;
 }
 
@@ -222,7 +222,7 @@ a {
 @media (max-width: 860px){
   .homeGrid{ grid-template-columns: 1fr; }
   .hero{ flex-direction: column; align-items: flex-start; }
-  .heroGifWrap{ width: 100%; height: 180px; }
+  .heroGifWrap{ width: 100%; }
 }
 
 .buttons{

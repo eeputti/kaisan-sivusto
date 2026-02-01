@@ -5,7 +5,7 @@ export function RetroBox({
   children,
   className = "",
 }: {
-  title?: string;
+  title?: ReactNode;
   children: ReactNode;
   className?: string;
 }) {

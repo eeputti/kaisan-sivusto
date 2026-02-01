@@ -45,10 +45,10 @@ export function SiteHeader({ active }: { active?: string }) {
         <div className="heroRight">
           <div className="heroGifWrap" title="hero gif">
             <Image
-              src="/media/hero.gif"
-              alt="hero gif"
+              src="/kotisivugif-ezgif.com-resize.gif"
+              alt="päägifi"
               width={220}
-              height={160}
+              height={220}
               className="heroGif"
               priority
             />
