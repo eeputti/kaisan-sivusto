@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { RetroBox } from "@/components/RetroBox";
@@ -20,6 +20,8 @@ export function DateGame() {
   const { goodTraits, badTraits } = site.dateGame;
   const [selectedGood, setSelectedGood] = useState<Set<string>>(new Set());
   const [dismissedBad, setDismissedBad] = useState<Record<string, string>>({});
+  const [wrongPulse, setWrongPulse] = useState<Record<string, boolean>>({});
+  const wrongTimers = useRef<Record<string, number>>({});
 
   const traits = useMemo<Trait[]>(() => {
     const combined = [
@@ -48,6 +50,14 @@ export function DateGame() {
     }
   }, [isComplete]);
 
+  useEffect(() => {
+    return () => {
+      Object.values(wrongTimers.current).forEach((timer) => {
+        window.clearTimeout(timer);
+      });
+    };
+  }, []);
+
   const toggleGood = (label: string) => {
     setSelectedGood((prev) => {
       const next = new Set(prev);
@@ -61,6 +71,18 @@ export function DateGame() {
   };
 
   const dismissBad = (label: string) => {
+    setWrongPulse((prev) => ({ ...prev, [label]: true }));
+    if (wrongTimers.current[label]) {
+      window.clearTimeout(wrongTimers.current[label]);
+    }
+    wrongTimers.current[label] = window.setTimeout(() => {
+      setWrongPulse((prev) => {
+        const next = { ...prev };
+        delete next[label];
+        return next;
+      });
+      delete wrongTimers.current[label];
+    }, 450);
     setDismissedBad((prev) => {
       if (prev[label]) {
         return prev;
@@ -88,7 +110,7 @@ export function DateGame() {
                 isSelected ? "traitSelected" : ""
               } ${dismissed ? "traitDismissed" : ""} ${
                 !trait.good && dismissed ? "traitWrong" : ""
-              }`}
+              } ${wrongPulse[trait.label] ? "traitError" : ""}`}
             >
               <button
                 type="button"
