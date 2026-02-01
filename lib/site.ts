@@ -110,6 +110,36 @@ export const site = {
           prompt: "",
           options: ["road-trip", "kaupunkiloma"],
         },
+        {
+          id: "series",
+          prompt: "",
+          options: ["sarja", "elokuva"],
+        },
+        {
+          id: "call",
+          prompt: "",
+          options: ["viesti", "puhelu"],
+        },
+        {
+          id: "kiss",
+          prompt: "",
+          options: ["pusu", "hali"],
+        },
+        {
+          id: "now",
+          prompt: "",
+          options: ["nyt", "joskus"],
+        },
+        {
+          id: "kaisa",
+          prompt: "",
+          options: ["kaisa", "eelis"],
+        },
+        {
+          id: "us",
+          prompt: "",
+          options: ["me", "kaikki muu"],
+        },
       ],
     },
   },
