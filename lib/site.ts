@@ -22,13 +22,7 @@ export const site = {
     latestAlbumTitle: "uusin mixtape",
     latestAlbumName: "kaisan + eeliksen mixtape",
     latestAlbumDate: "08/02",
-    latestAlbumTracks: [
-      "1. sun nauru",
-      "2. meidän aamut",
-      "3. pienet kävelyt",
-      "4. se yks ilta",
-      "5. vielä yks kierros",
-    ],
+    latestAlbumTracks: [],
     memoriesTitle: "pieniä muistoja",
     memories: [
       {
