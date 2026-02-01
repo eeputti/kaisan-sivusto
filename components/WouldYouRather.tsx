@@ -34,6 +34,19 @@ export function WouldYouRather() {
     setAnswers((prev) => ({ ...prev, [id]: option }));
   };
 
+  const isCorrectAnswer = (id: string, option: string) => {
+    if (id === "coffee") {
+      return option === "aamukahvi";
+    }
+    if (id === "movie") {
+      return option === "leffailta";
+    }
+    if (id === "travel") {
+      return true;
+    }
+    return false;
+  };
+
   const getResponse = (id: string, option: string) => {
     if (id === "coffee") {
       return option === "aamukahvi"
@@ -61,7 +74,13 @@ export function WouldYouRather() {
                 <button
                   key={option}
                   type="button"
-                  className={`btn88${answers[question.id] === option ? " btn88Active" : ""}`}
+                  className={`btn88${
+                    answers[question.id] === option
+                      ? isCorrectAnswer(question.id, option)
+                        ? " btn88Active"
+                        : " btn88Wrong"
+                      : ""
+                  }`}
                   onClick={() => handleAnswer(question.id, option)}
                   aria-pressed={answers[question.id] === option}
                 >
