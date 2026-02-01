@@ -48,6 +48,30 @@ export function WouldYouRather() {
     if (id === "travel") {
       return "molemmat oikein! nyt on nii paha kysymys et saa ottaa kyl molemmat";
     }
+    if (id === "series") {
+      return option === "sarja"
+        ? "sarja, koska pidempään yhdessä \u003c3"
+        : "eepun vastaus ois sarja, koska pidempään yhdessä";
+    }
+    if (id === "call") {
+      return option === "puhelu"
+        ? "puhelu (mut viestitki on aina ihaniii jeeee)"
+        : "mun vastaus ois puhelu (mut viestitki on aina ihaniii jeeee)";
+    }
+    if (id === "kiss") {
+      return "molemmat, mut eka pusu tai hali tai hali tai pusu";
+    }
+    if (id === "now") {
+      return option === "nyt" ? "nyt tietty" : "eepun vastaus: nyt tietty";
+    }
+    if (id === "kaisa") {
+      return option === "kaisa"
+        ? "eeliksen vastaus on ainut oikee: kaisa!!!!!"
+        : "eeliksen vastaus on ainut oikee: kaisa!!!!!";
+    }
+    if (id === "us") {
+      return option === "me" ? "oikee vastaus on me!! JEEEE" : "oikee vastaus on me!! JEEEE";
+    }
     return "";
   };
 
