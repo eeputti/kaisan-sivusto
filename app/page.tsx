@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LayoutFrame } from "@/components/LayoutFrame";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
@@ -13,10 +14,10 @@ export default function HomePage() {
           <RetroBox title={h.whatsNewTitle}>
             <p className="p">{h.whatsNew}</p>
             <div className="gifStrip" aria-hidden="true">
-              <Image src="/media/featured.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/fish.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/hg.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/vhs.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/kotisivugif2.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/kotisivu%20gifi3.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/kotisivu%20gif4.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/kotisivu%20isoin%20gif.gif" alt="" width={56} height={56} className="gifSticker" />
             </div>
             <div className="hr" />
           </RetroBox>
@@ -55,13 +56,8 @@ export default function HomePage() {
                 <li key={track}>{track}</li>
               ))}
             </ul>
-            <div className="gifStrip" aria-hidden="true">
-              <Image src="/media/kachow.gif" alt="" width={48} height={48} className="gifSticker" />
-              <Image src="/media/shark.gif" alt="" width={48} height={48} className="gifSticker" />
-              <Image src="/media/wii.gif" alt="" width={48} height={48} className="gifSticker" />
-            </div>
           </RetroBox>
-          <RetroBox title={h.memoriesTitle}>
+          <RetroBox title={<Link href="/muistot">{h.memoriesTitle}</Link>}>
             <div className="homeMemoriesGrid">
               {h.memories.map((memory) => (
                 <div key={memory.src} className="homeMemoriesItem">
