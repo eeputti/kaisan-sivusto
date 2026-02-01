@@ -9,9 +9,9 @@ export default function MinipeliPage() {
       <div className="pageSection">
         <RetroBox title="minipelit">
           <div className="gifStrip" aria-hidden="true">
-            <Image src="/media/kachow 2.gif" alt="" width={48} height={48} className="gifSticker" />
-            <Image src="/media/featured.gif" alt="" width={48} height={48} className="gifSticker" />
-            <Image src="/media/frog.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/minipeli1.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/minipeli2.gif" alt="" width={48} height={48} className="gifSticker" />
+            <Image src="/minipeli3.gif" alt="" width={48} height={48} className="gifSticker" />
           </div>
           <MinipeliList />
         </RetroBox>

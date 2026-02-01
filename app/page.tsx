@@ -16,7 +16,6 @@ export default function HomePage() {
             <div className="gifStrip" aria-hidden="true">
               <Image src="/kotisivugif2.gif" alt="" width={56} height={56} className="gifSticker" />
               <Image src="/kotisivu%20gifi3.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/kotisivu%20gif4.gif" alt="" width={56} height={56} className="gifSticker" />
               <Image src="/kotisivu%20isoin%20gif.gif" alt="" width={56} height={56} className="gifSticker" />
             </div>
             <div className="hr" />
