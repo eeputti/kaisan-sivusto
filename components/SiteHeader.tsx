@@ -56,12 +56,6 @@ export function SiteHeader({ active }: { active?: string }) {
         </div>
       </header>
 
-      <div className="stickerRow" aria-hidden="true">
-        <Image src="/media/frog.gif" alt="" width={32} height={32} />
-        <Image src="/media/vhs.gif" alt="" width={32} height={32} />
-        <Image src="/media/frog.gif" alt="" width={32} height={32} />
-        <Image src="/media/mail.gif" alt="" width={32} height={32} />
-      </div>
     </>
   );
 }
