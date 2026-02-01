@@ -13,9 +13,9 @@ export default function HomePage() {
           <RetroBox title={h.whatsNewTitle}>
             <p className="p">{h.whatsNew}</p>
             <div className="gifStrip" aria-hidden="true">
+              <Image src="/media/kotisivugif2.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/media/kotisivu gifi3.gif" alt="" width={56} height={56} className="gifSticker" />
               <Image src="/media/featured.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/fish.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/hg.gif" alt="" width={56} height={56} className="gifSticker" />
               <Image src="/media/vhs.gif" alt="" width={56} height={56} className="gifSticker" />
             </div>
             <div className="hr" />
