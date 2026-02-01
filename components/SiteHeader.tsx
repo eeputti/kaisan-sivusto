@@ -45,8 +45,8 @@ export function SiteHeader({ active }: { active?: string }) {
         <div className="heroRight">
           <div className="heroGifWrap" title="hero gif">
             <Image
-              src="/media/hero.gif"
-              alt="hero gif"
+              src="/media/kotisivu isoin gif.gif"
+              alt="kotisivu hero gif"
               width={220}
               height={160}
               className="heroGif"
