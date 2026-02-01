@@ -15,8 +15,8 @@ export default function HomePage() {
             <div className="gifStrip" aria-hidden="true">
               <Image src="/media/kotisivugif2.gif" alt="" width={56} height={56} className="gifSticker" />
               <Image src="/media/kotisivu gifi3.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/featured.gif" alt="" width={56} height={56} className="gifSticker" />
-              <Image src="/media/vhs.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/media/kotisivugif2.gif" alt="" width={56} height={56} className="gifSticker" />
+              <Image src="/media/kotisivu gifi3.gif" alt="" width={56} height={56} className="gifSticker" />
             </div>
             <div className="hr" />
           </RetroBox>
@@ -56,9 +56,9 @@ export default function HomePage() {
               ))}
             </ul>
             <div className="gifStrip" aria-hidden="true">
-              <Image src="/media/kachow.gif" alt="" width={48} height={48} className="gifSticker" />
-              <Image src="/media/shark.gif" alt="" width={48} height={48} className="gifSticker" />
-              <Image src="/media/wii.gif" alt="" width={48} height={48} className="gifSticker" />
+              <Image src="/media/kotisivugif2.gif" alt="" width={48} height={48} className="gifSticker" />
+              <Image src="/media/kotisivu gifi3.gif" alt="" width={48} height={48} className="gifSticker" />
+              <Image src="/media/kotisivugif2.gif" alt="" width={48} height={48} className="gifSticker" />
             </div>
           </RetroBox>
           <RetroBox title={h.memoriesTitle}>
