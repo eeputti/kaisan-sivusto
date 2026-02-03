@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { RetroBox } from "@/components/RetroBox";
 import { site } from "@/lib/site";
@@ -11,6 +11,7 @@ export function HeartMiniGame() {
   const { heartMiniGame } = site.interactive;
   const [count, setCount] = useState(0);
   const [position, setPosition] = useState({ top: 10, left: 10 });
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const hasUnlocked = count >= heartMiniGame.targetCount;
 
   const moveButton = useCallback(() => {
@@ -37,6 +38,10 @@ export function HeartMiniGame() {
   const handleClick = () => {
     setCount((prev) => Math.min(prev + 1, heartMiniGame.targetCount));
     moveButton();
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      void audioRef.current.play();
+    }
   };
 
   return (
@@ -47,6 +52,7 @@ export function HeartMiniGame() {
         </span>
       </div>
       <div className="heartPlayArea">
+        <audio ref={audioRef} src="/mwah.mp3" preload="auto" />
         <button
           type="button"
           className="btn88 heartButton"
