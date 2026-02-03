@@ -82,6 +82,14 @@ export const site = {
         links: [
           { label: "avaa lahja", href: "#" },
         ],
+        photos: [
+          { src: "/luonto_0000_1.png", alt: "Lahjakuva 1" },
+          { src: "/luonto_0001_2.png", alt: "Lahjakuva 2" },
+          { src: "/luonto_0002_3.png", alt: "Lahjakuva 3" },
+          { src: "/luonto_0003_4.png", alt: "Lahjakuva 4" },
+          { src: "/luonto_0004_5.png", alt: "Lahjakuva 5" },
+          { src: "/luonto_0005_6.png", alt: "Lahjakuva 6" },
+        ],
       },
     },
     heartMiniGame: {
