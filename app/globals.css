@@ -499,15 +499,13 @@ a {
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  gap: 24px;
 }
 
 .giftPhoto{
   margin: 0;
-  border: none;
-  background: transparent;
+  border: 2px solid var(--border);
+  background: var(--surface);
   padding: 0;
   height: 100vh;
 }
