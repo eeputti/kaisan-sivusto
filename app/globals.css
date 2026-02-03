@@ -328,8 +328,8 @@ a {
 }
 
 .traitWrong .traitButton{
-  background: var(--accent);
-  color: var(--bg);
+  background: #ff6b6b;
+  color: #1f0d0d;
 }
 
 .traitError .traitButton{
