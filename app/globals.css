@@ -498,23 +498,21 @@ a {
 .giftGallery{
   margin-top: 16px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
 }
 
 .giftPhoto{
   margin: 0;
   border: 2px solid var(--border);
   background: var(--surface);
-  padding: 0;
-  height: 100vh;
+  padding: 6px;
 }
 
 .giftPhoto img{
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .minipeliList{

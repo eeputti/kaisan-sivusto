@@ -33,15 +33,13 @@ export function GiftReveal() {
           <span className="pill">{giftReveal.reveal.pill}</span>
           <h3 className="miniTitle">{giftReveal.reveal.title}</h3>
           <p className="p">{giftReveal.reveal.text}</p>
-          {giftReveal.reveal.links.length > 0 && (
-            <div className="buttons">
-              {giftReveal.reveal.links.map((link) => (
-                <a key={link.href} className="btn88" href={link.href} target="_blank" rel="noreferrer">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          )}
+          <div className="buttons">
+            {giftReveal.reveal.links.map((link) => (
+              <a key={link.href} className="btn88" href={link.href} target="_blank" rel="noreferrer">
+                {link.label}
+              </a>
+            ))}
+          </div>
           {giftReveal.reveal.photos && giftReveal.reveal.photos.length > 0 && (
             <div className="giftGallery">
               {giftReveal.reveal.photos.map((photo) => (
