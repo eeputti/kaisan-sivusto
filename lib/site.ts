@@ -65,7 +65,6 @@ export const site = {
       title: "lahja",
       heading: "hyvää synttäriä kaisamuru!",
       steps: [
-        { text: "", buttonLabel: "avaa lahja", size: "normal" },
         { text: "ootko varma että haluut avata tän", buttonLabel: "joo oon varma :3", size: "normal" },
         { text: "ooksä nyt ihan satavarma täst??", buttonLabel: "joo oon edellee", size: "normal" },
         { text: "aikuisten oikeesti vai?", buttonLabel: "ihan aikusten oikeeesti jooo", size: "normal" },
@@ -77,11 +76,11 @@ export const site = {
       ],
       reveal: {
         pill: "lahja",
-        title: "okei tässä lahja",
-        text: "linkki lisätään tähän myöhemmin.",
-        links: [
-          { label: "avaa lahja", href: "#" },
-        ],
+        title:
+          "mun maailman raksuin ja kaunein oot ihanin ja paras ja jee kiitos et saan viettää tätä ihanaa elämää just sunkaa ku oot just tollanen KAISA!!!!",
+        text:
+          "sen kunniaks et oot KAISA ni haluun viedä meiät viikonlopuks mökkireissul :3 ni täs vähä tunnelmaa:",
+        links: [] as { label: string; href: string }[],
         photos: [
           { src: "/luonto_0000_1.png", alt: "Lahjakuva 1" },
           { src: "/luonto_0001_2.png", alt: "Lahjakuva 2" },

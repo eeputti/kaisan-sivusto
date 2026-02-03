@@ -33,7 +33,6 @@ const games: Game[] = [
 
 export function MinipeliList() {
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
-  const allComplete = games.every((game) => completed[game.id]);
 
   useEffect(() => {
     const status = games.reduce<Record<string, boolean>>((acc, game) => {
@@ -53,13 +52,6 @@ export function MinipeliList() {
           {completed[game.id] && <span className="pill">voitettu</span>}
         </div>
       ))}
-      {allComplete && (
-        <div className="minipeliItem">
-          <Link className="btn88" href="/lahja">
-            avaa lahja
-          </Link>
-        </div>
-      )}
     </div>
   );
 }
