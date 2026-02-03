@@ -40,6 +40,15 @@ export function GiftReveal() {
               </a>
             ))}
           </div>
+          {giftReveal.reveal.photos && giftReveal.reveal.photos.length > 0 && (
+            <div className="giftGallery">
+              {giftReveal.reveal.photos.map((photo) => (
+                <figure key={photo.src} className="giftPhoto">
+                  <img src={photo.src} alt={photo.alt} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </RetroBox>
