@@ -35,16 +35,10 @@ export function WouldYouRather() {
   };
 
   const isCorrectAnswer = (id: string, option: string) => {
-    if (id === "coffee") {
-      return option === "aamukahvi";
+    if (id === "kaisa") {
+      return option === "kaisa";
     }
-    if (id === "movie") {
-      return option === "leffailta";
-    }
-    if (id === "travel") {
-      return true;
-    }
-    return false;
+    return true;
   };
 
   const getResponse = (id: string, option: string) => {
